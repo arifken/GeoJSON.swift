@@ -13,7 +13,7 @@ public struct GeoJSONPoint: GeoJSONFeature {
     
     public let coordinate: CLLocationCoordinate2D
     
-    public static var type: String { return "Point" }
+    public static var featureType: String { return "Point" }
     
     public init?(dictionary: [String: Any]) {
         guard let coordinate = (dictionary["coordinates"] as? [Double])?.coordinateRepresentation , CLLocationCoordinate2DIsValid(coordinate) else { return nil }

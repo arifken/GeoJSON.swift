@@ -10,19 +10,19 @@ import Foundation
 import CoreLocation
 
 public protocol GeoJSONFeature {
-    static var type: String { get }
+    static var featureType: String { get }
     var geometryCoordinates: [Any] { get }
     var dictionaryRepresentation: [String: Any] { get }
     init?(dictionary: [String: Any])
 }
 
 extension GeoJSONFeature {
-    public static var type: String { return "Feature" }
+    public static var featureType: String { return "Feature" }
     public var dictionaryRepresentation: [String: Any] {
         return [
             "geometry": [
                 "coordinates": self.geometryCoordinates,
-                "type": type(of: self).type
+                "type": type(of: self).featureType
             ],
             "type": "Feature",
             "properties": [:]

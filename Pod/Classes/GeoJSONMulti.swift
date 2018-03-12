@@ -10,7 +10,7 @@ import Foundation
 import CoreLocation
 
 public struct GeoJSONMulti<FeatureType>: GeoJSONFeature where FeatureType: GeoJSONFeature {
-    public static var type: String { return "Multi" + FeatureType.type }
+    public static var featureType: String { return "Multi" + FeatureType.featureType }
     
     public let features: [FeatureType]
     

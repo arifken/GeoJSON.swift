@@ -13,7 +13,7 @@ public struct GeoJSONPolygon: GeoJSONFeature {
     public typealias Ring = [CLLocationCoordinate2D]
     public let rings: [Ring]
     
-    public static var type: String { return "Polygon" }
+    public static var featureType: String { return "Polygon" }
     
     public init?(dictionary: [String: Any]) {
         guard let ringArrays = dictionary["coordinates"] as? [[[Double]]] else { return nil }

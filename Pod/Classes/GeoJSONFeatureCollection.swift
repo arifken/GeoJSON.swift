@@ -37,11 +37,11 @@ public struct GeoJSONFeatureCollection: GeoJSONFeature {
     }
     
     static let typeMap: [String: GeoJSONFeature.Type] = [
-        GeoJSONPoint.type: GeoJSONPoint.self,
-        GeoJSONPolygon.type: GeoJSONPolygon.self,
-        GeoJSONMultiPoint.type: GeoJSONMultiPoint.self,
-        GeoJSONLineString.type: GeoJSONLineString.self,
-        GeoJSONMultiPolygon.type: GeoJSONMultiPolygon.self,
-        GeoJSONMultiLineString.type: GeoJSONMultiLineString.self
+        GeoJSONPoint.featureType: GeoJSONPoint.self,
+        GeoJSONPolygon.featureType: GeoJSONPolygon.self,
+        GeoJSONMultiPoint.featureType: GeoJSONMultiPoint.self,
+        GeoJSONLineString.featureType: GeoJSONLineString.self,
+        GeoJSONMultiPolygon.featureType: GeoJSONMultiPolygon.self,
+        GeoJSONMultiLineString.featureType: GeoJSONMultiLineString.self
     ]
 }

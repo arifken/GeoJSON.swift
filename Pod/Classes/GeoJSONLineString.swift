@@ -10,7 +10,7 @@ import Foundation
 import CoreLocation
 
 public struct GeoJSONLineString: GeoJSONFeature {
-    public static var type: String { return "LineString" }
+    public static var featureType: String { return "LineString" }
     internal let coordinates: [CLLocationCoordinate2D]
     
     public init?(dictionary: [String: Any]) {
